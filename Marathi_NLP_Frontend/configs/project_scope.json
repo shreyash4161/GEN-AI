@@ -1,0 +1,18 @@
+{
+  "languages": ["Marathi", "Gujarati", "Assamese"],
+  "tasks": ["hate_speech", "sentiment_analysis", "named_entity_recognition"],
+  "verified_combinations": [
+    {
+      "language": "Marathi",
+      "task": "hate_speech",
+      "status": "IMPLEMENTED_AND_EVALUATED",
+      "dataset": "L3Cube-MahaHate",
+      "labels": ["hate", "offensive", "profane", "not"]
+    }
+  ],
+  "pending_combinations": "All other language/task combinations require licensed task-specific datasets, label schemas, and trained/evaluated checkpoints. No results are implied.",
+  "cross_lingual_transfer": {
+    "status": "INTERFACE_ONLY_NOT_EVALUATED",
+    "note": "A source/target transfer protocol is not trained or measured in this repository."
+  }
+}

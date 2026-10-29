@@ -1,0 +1,25 @@
+# Python environment
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Model weights and training checkpoints
+*.safetensors
+*.pt
+*.pth
+*.bin
+*.ckpt
+
+# Generated model outputs
+results/models/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Frontend dependencies and build output
+node_modules/
+dist/
+build/

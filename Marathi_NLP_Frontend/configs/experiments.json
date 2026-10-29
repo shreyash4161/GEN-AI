@@ -1,0 +1,15 @@
+{
+  "proportions": [0.05, 0.10, 0.25, 0.50, 1.0],
+  "seeds": [42],
+  "arms": {
+    "A0": "real training data only",
+    "A1": "real plus randomly generated synthetic data",
+    "A2": "real plus class-balanced synthetic data",
+    "A3": "real plus linguistically controlled synthetic data",
+    "A4": "real plus SDQS-filtered synthetic data",
+    "A5": "SDQS filtering plus difficulty-aware generation",
+    "A6": "adaptive quality-aware generation with permitted training/validation feedback"
+  },
+  "default_status": "NOT_RUN",
+  "full_matrix_requires_explicit_invocation": true
+}

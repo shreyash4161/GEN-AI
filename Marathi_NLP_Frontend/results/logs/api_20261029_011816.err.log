@@ -1,0 +1,31 @@
+INFO:     Started server process [4388]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights:  15%|#4        | 30/201 [00:00<00:00, 233.19it/s]Loading weights:  27%|##7       | 55/201 [00:00<00:00, 226.53it/s]Loading weights:  41%|####1     | 83/201 [00:00<00:00, 231.13it/s]Loading weights:  53%|#####3    | 107/201 [00:00<00:00, 191.24it/s]Loading weights:  66%|######6   | 133/201 [00:00<00:00, 198.12it/s]Loading weights: 100%|##########| 201/201 [00:00<00:00, 306.96it/s]
+[W1029 01:19:00.000000000 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 369098752 bytes (free: 5326766080, total: 6438780928).
+[W1029 01:19:00.000000000 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 369098752 bytes (free: 5326766080, total: 6438780928).
+Could not load checkpoint mahabert_a0_1793216304_27fe0c_seed42
+Traceback (most recent call last):
+  File "E:\GENAI\CODE\Marathi_NLP_Frontend\api.py", line 105, in _get_model
+    ).to(DEVICE)
+      ^^^^^^^^^^
+  File "C:\Users\Shreyash Chaudhari\AppData\Local\Programs\Python\Python312\Lib\site-packages\transformers\modeling_utils.py", line 3710, in to
+    return super().to(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\GENAI\CODE\Marathi_NLP_Frontend\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1388, in to
+    return self._apply(convert)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "E:\GENAI\CODE\Marathi_NLP_Frontend\.venv\Lib\site-packages\torch\nn\modules\module.py", line 933, in _apply
+    module._apply(fn)
+  File "E:\GENAI\CODE\Marathi_NLP_Frontend\.venv\Lib\site-packages\torch\nn\modules\module.py", line 933, in _apply
+    module._apply(fn)
+  File "E:\GENAI\CODE\Marathi_NLP_Frontend\.venv\Lib\site-packages\torch\nn\modules\module.py", line 933, in _apply
+    module._apply(fn)
+  File "E:\GENAI\CODE\Marathi_NLP_Frontend\.venv\Lib\site-packages\torch\nn\modules\module.py", line 966, in _apply
+    param_applied = fn(param)
+                    ^^^^^^^^^
+  File "E:\GENAI\CODE\Marathi_NLP_Frontend\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1374, in convert
+    return t.to(
+           ^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 352.00 MiB. GPU 0 has a total capacity of 6.00 GiB of which 4.96 GiB is free. Process 16704 has 17179869184.00 GiB memory in use. Process 20652 has 17179869184.00 GiB memory in use. Process 19908 has 17179869184.00 GiB memory in use. Process 1348 has 17179869184.00 GiB memory in use. Process 23576 has 17179869184.00 GiB memory in use. Process 24192 has 17179869184.00 GiB memory in use. Process 22004 has 17179869184.00 GiB memory in use. Process 16500 has 17179869184.00 GiB memory in use. Process 12612 has 17179869184.00 GiB memory in use. Process 2816 has 17179869184.00 GiB memory in use. Process 32776 has 17179869184.00 GiB memory in use. Process 560 has 17179869184.00 GiB memory in use. Process 4664 has 17179869184.00 GiB memory in use. Process 37312 has 17179869184.00 GiB memory in use. Process 17208 has 17179869184.00 GiB memory in use. Process 40100 has 17179869184.00 GiB memory in use. Including non-PyTorch memory, this process has 17179869184.00 GiB memory in use. Of the allocated memory 0 bytes is allocated by PyTorch, and 0 bytes is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)

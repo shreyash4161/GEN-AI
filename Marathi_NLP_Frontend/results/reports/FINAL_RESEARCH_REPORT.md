@@ -1,0 +1,40 @@
+# Marathi MahaHate research report
+
+## Scope
+
+This report describes only saved run metadata for four-class Marathi MahaHate hate-speech classification. It does not claim evaluation of Gujarati, Assamese, sentiment analysis, named entity recognition, or cross-lingual transfer.
+
+Synthetic generation and A0-A6 training interfaces are implemented. Persisted live provider candidates: 33; accepted by machine checks and pending human review: 14; rejected: 19. This is not a ground-truth evaluation and no augmentation-arm training result is recorded. Fixture smoke output is excluded. A0 means real-only runs; historical records without an explicit arm are reported as A0 for compatibility.
+
+## Run status
+
+- Saved run records: 13
+- Completed: 7
+- Failed: 6
+- Test metrics are included only when the run record contains them. A missing value means unavailable, not zero.
+
+## Recorded results
+
+| experiment_id | status | model | arm | seed | proportion | real_train_rows | synthetic_rows | train_rows | validation_macro_f1 | test_accuracy | test_macro_precision | test_macro_recall | test_macro_f1 | test_weighted_f1 | inference_latency_ms_per_example | training_seconds |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| mahabert_1793209821_seed42 | COMPLETED | MahaBERT | A0 | 42.0 | 0.05000704324552754 | 1065.0 | 0.0 | 1065.0 | 0.7470215109192513 | 0.741 | 0.745641547433594 | 0.741 | 0.7423378074841301 | 0.7423378074841303 |  | 200.83157020000363 |
+| mahabert_a0_1793215319_14fec5_seed42 | COMPLETED | MahaBERT | A0 | 42.0 | 0.05000704324552754 | 1065.0 | 0.0 | 1065.0 | 0.6456447106795759 | 0.664 | 0.6813679983391835 | 0.6639999999999999 | 0.6568632592074961 | 0.6568632592074962 | 7.277 | 93.15786680000019 |
+| mahabert_a0_1793215515_fceb14_seed42 | COMPLETED | MahaBERT | A0 | 42.0 | 0.05000704324552754 | 1065.0 | 0.0 | 1065.0 | 0.6456447106795759 | 0.6645 | 0.6822091619452587 | 0.6645000000000001 | 0.6573404981071167 | 0.6573404981071167 | 4.581274850002956 |  |
+| mahabert_a0_1793216304_27fe0c_seed42 | COMPLETED | MahaBERT | A0 | 42.0 | 0.05000704324552754 | 1065.0 | 0.0 | 1065.0 | 0.6456447106795759 | 0.6645 | 0.6822091619452587 | 0.6645000000000001 | 0.6573404981071167 | 0.6573404981071167 | 4.765336349999416 |  |
+| mahabert_a0_1793290925_000da2_seed42 | COMPLETED | MahaBERT | A0 | 42.0 | 0.05000704324552754 | 1065.0 | 0.0 | 1065.0 | 0.6456447106795759 | 0.664 | 0.6813679983391835 | 0.6639999999999999 | 0.6568632592074961 | 0.6568632592074962 | 7.5182 | 83.98741870000231 |
+| muril_1793179737_seed42 | COMPLETED | MuRIL | A0 | 42.0 | 0.003005118091750012 | 64.0 | 0.0 | 64.0 | 0.1 |  |  |  |  |  |  | 38.12522869999975 |
+| muril_1793180008_seed42 | COMPLETED | MuRIL | A0 | 42.0 | 0.05 | 1065.0 | 0.0 | 1065.0 | 0.5029823587483742 | 0.5585 | 0.5410041671568349 | 0.5585 | 0.5044987630023522 | 0.5044987630023522 |  | 237.34558800000013 |
+| muril_1793178254_seed42 | FAILED | MuRIL |  | 42.0 |  |  |  |  |  |  |  |  |  |  |  |  |
+| muril_1793179489_seed42 | FAILED | MuRIL |  | 42.0 |  |  |  |  |  |  |  |  |  |  |  |  |
+| muril_1793179685_seed42 | FAILED | MuRIL |  | 42.0 |  |  |  |  |  |  |  |  |  |  |  |  |
+| muril_1793179820_seed42 | FAILED | MuRIL |  | 42.0 |  |  |  |  |  |  |  |  |  |  |  |  |
+| mahabert_1793209608_seed42 | FAILED | MahaBERT |  | 42.0 |  |  |  |  |  |  |  |  |  |  |  |  |
+| xlm-roberta_a0_1793293487_5b6122_seed42 | FAILED | XLM-RoBERTa | A0 |  |  |  |  |  |  |  |  |  |  |  |  |  |
+
+## Method and limitations
+
+The run script selects checkpoints using validation Macro-F1. Held-out test evaluation is opt-in and must happen after model selection. This report does not independently verify the underlying data or checkpoint. Review the run JSON, split fingerprints, model configuration, and experiment registry before using results in a thesis. No statistical significance is claimed from a single seed.
+
+## Reproducibility
+
+Each row links to its saved run metadata path in the adjacent CSV. If there are no run records, see the implementation audit and status report for missing data, environment, and experiments.

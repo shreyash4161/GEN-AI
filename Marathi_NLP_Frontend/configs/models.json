@@ -1,0 +1,12 @@
+{
+  "task": "four_class_sequence_classification",
+  "labels": ["hate", "offensive", "profane", "not"],
+  "models": {
+    "MahaBERT": "l3cube-pune/marathi-bert",
+    "MuRIL": "google/muril-base-cased",
+    "XLM-RoBERTa": "FacebookAI/xlm-roberta-base",
+    "IndicBERT v2": "ai4bharat/IndicBERTv2-MLM-only"
+  },
+  "max_length": 128,
+  "primary_metric": "macro_f1"
+}

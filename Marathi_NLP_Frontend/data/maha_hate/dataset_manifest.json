@@ -1,0 +1,41 @@
+{
+  "train": {
+    "file": "C:\\Users\\Shreyash Chaudhari\\Desktop\\GENAI\\CODE\\Marathi_NLP_Frontend\\data\\maha_hate\\hate_train.xlsx",
+    "bytes": 2172021,
+    "sha256": "71df1627f35f86fde76cb58d4ffd6ea33f1bf5c9d895c06ca574d7a380c08189",
+    "raw_rows": 21500,
+    "validated_rows": 21308,
+    "label_counts": {
+      "hate": 5317,
+      "offensive": 5296,
+      "profane": 5332,
+      "not": 5363
+    }
+  },
+  "valid": {
+    "file": "C:\\Users\\Shreyash Chaudhari\\Desktop\\GENAI\\CODE\\Marathi_NLP_Frontend\\data\\maha_hate\\hate_valid.xlsx",
+    "bytes": 161891,
+    "sha256": "1d3f548afd7b0163fa16f30b6ae564c5ea9d3d5fa80753d146b148af65e1cc3a",
+    "raw_rows": 1500,
+    "validated_rows": 1500,
+    "label_counts": {
+      "hate": 375,
+      "offensive": 375,
+      "profane": 375,
+      "not": 375
+    }
+  },
+  "test": {
+    "file": "C:\\Users\\Shreyash Chaudhari\\Desktop\\GENAI\\CODE\\Marathi_NLP_Frontend\\data\\maha_hate\\hate_test.xlsx",
+    "bytes": 209696,
+    "sha256": "72c09d528d907dcb0db1b1a6e35a1d1a3493468a62e7eead332e25fd02e5a9bc",
+    "raw_rows": 2000,
+    "validated_rows": 2000,
+    "label_counts": {
+      "hate": 500,
+      "offensive": 500,
+      "profane": 500,
+      "not": 500
+    }
+  }
+}
